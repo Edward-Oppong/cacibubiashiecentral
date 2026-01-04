@@ -4,6 +4,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import About from "./pages/About";
+import Sermons from "./pages/Sermons";
+import SermonsVideo from "./pages/SermonsVideo";
+import SermonsText from "./pages/SermonsText";
+import Events from "./pages/Events";
+import Ministries from "./pages/Ministries";
+import Prayer from "./pages/Prayer";
+import Give from "./pages/Give";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +25,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/about" element={<About />} />
+          <Route path="/sermons" element={<Sermons />} />
+          <Route path="/sermons/video" element={<SermonsVideo />} />
+          <Route path="/sermons/text" element={<SermonsText />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/ministries" element={<Ministries />} />
+          <Route path="/prayer" element={<Prayer />} />
+          <Route path="/give" element={<Give />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
