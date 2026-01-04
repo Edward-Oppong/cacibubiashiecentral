@@ -99,7 +99,7 @@ export default function PrayerPage() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-church-gold/10 flex items-center justify-center">
-                    <MessageSquare className="w-6 h-6 text-church-gold" />
+                    <MessageSquare className="w-6 h-6 text-red-500" />
                   </div>
                   <h2 className="font-serif text-3xl font-bold text-foreground">
                     Prayer Request
@@ -195,7 +195,7 @@ export default function PrayerPage() {
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-church-gold/10 flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-church-gold" />
+                    <Heart className="w-6 h-6 text-red-500" />
                   </div>
                   <h2 className="font-serif text-3xl font-bold text-foreground">
                     Share Testimony
@@ -260,7 +260,7 @@ export default function PrayerPage() {
                         required
                       />
                     </div>
-                    <Button type="submit" variant="gold" className="w-full">
+                    <Button type="submit" variant="churchPrimary" className="w-full">
                       <Heart className="w-4 h-4 mr-2" />
                       Submit Testimony
                     </Button>
