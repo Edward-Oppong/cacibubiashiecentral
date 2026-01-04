@@ -1,0 +1,136 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Play, BookOpen, Clock, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const latestSermons = [
+  {
+    id: 1,
+    title: "Walking in Faith: Trusting God's Plan",
+    preacher: "Pastor James Mensah",
+    date: "Jan 1, 2026",
+    duration: "45 min",
+    type: "video",
+    thumbnail: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=250&fit=crop",
+  },
+  {
+    id: 2,
+    title: "The Power of Prayer in Difficult Times",
+    preacher: "Elder Grace Owusu",
+    date: "Dec 29, 2025",
+    duration: "38 min",
+    type: "video",
+    thumbnail: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=400&h=250&fit=crop",
+  },
+  {
+    id: 3,
+    title: "Living a Life of Purpose",
+    preacher: "Pastor James Mensah",
+    date: "Dec 25, 2025",
+    duration: "52 min",
+    type: "text",
+    thumbnail: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=400&h=250&fit=crop",
+  },
+];
+
+export function SermonsSection() {
+  return (
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-14"
+        >
+          <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-church-gold rounded-full text-sm font-medium mb-4">
+            Latest Sermons
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Nourish Your Soul with the Word
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Access our library of inspiring sermons. Watch, listen, or read messages 
+            that will strengthen your faith and guide your walk with Christ.
+          </p>
+        </motion.div>
+
+        {/* Sermons Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {latestSermons.map((sermon, index) => (
+            <motion.article
+              key={sermon.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group bg-white rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden border border-border"
+            >
+              {/* Thumbnail */}
+              <div className="relative overflow-hidden aspect-video">
+                <img
+                  src={sermon.thumbnail}
+                  alt={sermon.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-church-deep-blue/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-16 h-16 rounded-full bg-church-gold flex items-center justify-center">
+                    {sermon.type === "video" ? (
+                      <Play className="w-8 h-8 text-white ml-1" />
+                    ) : (
+                      <BookOpen className="w-7 h-7 text-white" />
+                    )}
+                  </div>
+                </div>
+                <span className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
+                  sermon.type === "video" 
+                    ? "bg-church-gold text-white" 
+                    : "bg-church-deep-blue text-white"
+                }`}>
+                  {sermon.type === "video" ? "Video" : "Text"}
+                </span>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="font-serif font-semibold text-lg text-foreground mb-3 line-clamp-2 group-hover:text-church-gold transition-colors">
+                  {sermon.title}
+                </h3>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1.5">
+                    <User className="w-4 h-4" />
+                    {sermon.preacher}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between mt-4 pt-4 border-t border-border">
+                  <span className="text-sm text-muted-foreground">{sermon.date}</span>
+                  <span className="flex items-center gap-1 text-sm text-muted-foreground">
+                    <Clock className="w-4 h-4" />
+                    {sermon.duration}
+                  </span>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="flex justify-center gap-4">
+          <Button variant="churchPrimary" size="lg" asChild>
+            <Link to="/sermons/video" className="flex items-center gap-2">
+              <Play className="w-5 h-5" />
+              Video Sermons
+            </Link>
+          </Button>
+          <Button variant="churchOutline" size="lg" asChild>
+            <Link to="/sermons/text" className="flex items-center gap-2">
+              <BookOpen className="w-5 h-5" />
+              Text Sermons
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
