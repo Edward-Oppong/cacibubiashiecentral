@@ -64,7 +64,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-15">
+      <div className="relative z-10 container mx-auto px-4 pt-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Welcome Badge */}
           <motion.div
@@ -157,7 +157,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -172,6 +172,7 @@ export function HeroSection() {
           />
         </div>
       </motion.div>
+      */}
     </section>
   );
 }
