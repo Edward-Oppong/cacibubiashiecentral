@@ -68,7 +68,7 @@ export default function MinistriesPage() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 Our Ministries
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -148,7 +148,7 @@ export default function MinistriesPage() {
               We'd love to help you find the right ministry for your gifts and calling. 
               Contact us to learn more about how you can serve.
             </p>
-            <Button variant="gold" size="lg">
+            <Button className="bg-red-500 text-white" size="lg">
               Contact Ministry Office
             </Button>
           </div>

@@ -89,7 +89,7 @@ export default function TextSermonsPage() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 Text Sermons
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-6">
@@ -124,7 +124,7 @@ export default function TextSermonsPage() {
                     onClick={() => setSelectedTopic(topic)}
                     className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                       selectedTopic === topic
-                        ? "bg-church-gold text-white"
+                        ? "bg-red-500 text-white"
                         : "bg-muted text-muted-foreground hover:bg-muted/80"
                     }`}
                   >
@@ -152,15 +152,15 @@ export default function TextSermonsPage() {
                   >
                     <div className="flex flex-col sm:flex-row gap-6">
                       <div className="shrink-0">
-                        <div className="w-16 h-16 rounded-xl bg-church-gold/10 flex items-center justify-center group-hover:bg-church-gold transition-colors">
-                          <BookOpen className="w-8 h-8 text-church-gold group-hover:text-white transition-colors" />
+                        <div className="w-16 h-16 rounded-xl bg-church-gold/10 flex items-center justify-center transition-colors">
+                          <BookOpen className="w-8 h-8 text-red-500  transition-colors" />
                         </div>
                       </div>
                       <div className="flex-1">
                         <span className="inline-block px-3 py-1 bg-church-light-blue text-church-deep-blue rounded-full text-xs font-medium mb-3">
                           {sermon.topic}
                         </span>
-                        <h3 className="font-serif font-semibold text-xl text-foreground mb-2 group-hover:text-church-gold transition-colors">
+                        <h3 className="font-serif font-semibold text-xl text-foreground mb-2 group-hover:text-red-500 transition-colors">
                           {sermon.title}
                         </h3>
                         <p className="text-muted-foreground mb-4">{sermon.excerpt}</p>
@@ -177,10 +177,7 @@ export default function TextSermonsPage() {
                         </div>
                       </div>
                       <div className="shrink-0 flex sm:flex-col gap-2">
-                        <Button variant="churchOutline" size="sm">
-                          Read
-                        </Button>
-                        <Button variant="ghost" size="sm">
+                        <Button className="hover:bg-red-500" size="sm">
                           <Download className="w-4 h-4" />
                         </Button>
                       </div>
@@ -205,7 +202,7 @@ export default function TextSermonsPage() {
             <p className="text-muted-foreground mb-6">
               Watch our video sermons for a more immersive experience.
             </p>
-            <Button variant="churchPrimary" size="lg" asChild>
+            <Button className="bg-red-500 hover:bg-red-600" size="lg" asChild>
               <Link to="/sermons/video">Browse Video Sermons</Link>
             </Button>
           </div>

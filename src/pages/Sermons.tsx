@@ -18,7 +18,7 @@ export default function SermonsPage() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 Sermons
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -28,20 +28,6 @@ export default function SermonsPage() {
                 Access our library of inspiring sermons. Watch, listen, or read messages 
                 that will strengthen your faith and guide your walk with Christ.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" asChild>
-                  <Link to="/sermons/video" className="flex items-center gap-2">
-                    <Play className="w-5 h-5" />
-                    Video Sermons
-                  </Link>
-                </Button>
-                <Button variant="heroOutline" size="xl" asChild>
-                  <Link to="/sermons/text" className="flex items-center gap-2">
-                    <BookOpen className="w-5 h-5" />
-                    Text Sermons
-                  </Link>
-                </Button>
-              </div>
             </motion.div>
           </div>
         </section>

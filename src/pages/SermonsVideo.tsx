@@ -95,7 +95,7 @@ export default function VideoSermonsPage() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 Video Sermons
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-6">
@@ -130,7 +130,7 @@ export default function VideoSermonsPage() {
                     onClick={() => setSelectedTopic(topic)}
                     className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                       selectedTopic === topic
-                        ? "bg-church-gold text-white"
+                        ? "bg-red-500 text-white"
                         : "bg-muted text-muted-foreground hover:bg-muted/80"
                     }`}
                   >
@@ -163,16 +163,16 @@ export default function VideoSermonsPage() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-church-deep-blue/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="w-16 h-16 rounded-full bg-church-gold flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                        <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
                           <Play className="w-8 h-8 text-white ml-1" />
                         </div>
                       </div>
-                      <span className="absolute top-4 left-4 px-3 py-1 bg-church-gold text-white rounded-full text-xs font-medium">
+                      <span className="absolute top-4 left-4 px-3 py-1 bg-white/10 text-white rounded-full text-xs font-medium">
                         {sermon.topic}
                       </span>
                     </div>
                     <div className="p-6">
-                      <h3 className="font-serif font-semibold text-lg text-foreground mb-3 group-hover:text-church-gold transition-colors">
+                      <h3 className="font-serif font-semibold text-lg text-foreground mb-3 group-hover:text-red-500 transition-colors">
                         {sermon.title}
                       </h3>
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
