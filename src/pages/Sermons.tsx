@@ -12,7 +12,7 @@ export default function SermonsPage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function SermonsPage() {
 
         {/* Options Grid */}
         <section className="py-20 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}

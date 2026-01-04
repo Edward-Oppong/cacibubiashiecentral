@@ -12,7 +12,7 @@ export function GiveSection() {
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Header */}
           <motion.div
@@ -20,12 +20,12 @@ export function GiveSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4 border border-white/10">
+            <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4 border border-white/10">
               Support Our Mission
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Partner with Us in{" "}
-              <span className="text-church-gold">Kingdom Work</span>
+              <span className="text-red-500">Kingdom Work</span>
             </h2>
             <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10">
               Your generous giving enables us to spread the Gospel, support missions, 
@@ -51,7 +51,7 @@ export function GiveSection() {
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors"
               >
                 <div className="w-12 h-12 rounded-xl bg-church-gold/20 flex items-center justify-center mx-auto mb-4">
-                  <option.icon className="w-6 h-6 text-church-gold" />
+                  <option.icon className="w-6 h-6 text-red-300" />
                 </div>
                 <h3 className="font-serif font-semibold text-lg mb-2">{option.title}</h3>
                 <p className="text-white/70 text-sm">{option.description}</p>
@@ -66,7 +66,7 @@ export function GiveSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <Button variant="gold" size="xl" asChild>
+            <Button size="xl" className="bg-red-500" asChild>
               <Link to="/give">Give Online Now</Link>
             </Button>
             <p className="text-white/60 text-sm mt-4">

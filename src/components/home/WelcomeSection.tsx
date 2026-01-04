@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export function WelcomeSection() {
   return (
     <section className="py-20 lg:py-28 bg-church-cream">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Content */}
           <motion.div
@@ -15,12 +15,12 @@ export function WelcomeSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-church-gold rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-red-500 rounded-full text-sm font-medium mb-4">
               Welcome to Our Church
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
               Experience God's Love in Our{" "}
-              <span className="text-church-gold">Community</span>
+              <span className="text-red-500">Community</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Christ Apostolic Church International - Bubiashie Central is a vibrant 
@@ -74,7 +74,7 @@ export function WelcomeSection() {
               >
                 <div className="shrink-0">
                   <div className="w-14 h-14 rounded-xl bg-church-gold/10 flex items-center justify-center">
-                    <feature.icon className="w-7 h-7 text-church-gold" />
+                    <feature.icon className="w-7 h-7 text-red-500" />
                   </div>
                 </div>
                 <div>

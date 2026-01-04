@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Play, BookOpen, Calendar } from "lucide-react";
+import { Play, BookOpen, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-church.jpg";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const bibleVerses = [
   {
@@ -26,6 +27,16 @@ const bibleVerses = [
 
 export function HeroSection() {
   const [currentVerse, setCurrentVerse] = useState(0);
+  const { scrollToSection } = useSmoothScroll();
+
+    const handleWatchLive = () => {
+    window.open("https://www.youtube.com/@CACIBubiashie", "_blank");
+  };
+
+  const handleVisitUs = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection("#contact");
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,7 +64,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-20">
+      <div className="relative z-10 container mx-auto px-4 pt-15">
         <div className="max-w-4xl mx-auto text-center">
           {/* Welcome Badge */}
           <motion.div
@@ -75,7 +86,7 @@ export function HeroSection() {
             className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
             A Place of{" "}
-            <span className="text-gradient-gold">Faith</span>,{" "}
+            <span className="text-red-500">Faith</span>,{" "}
             <br className="hidden sm:block" />
             Hope & Transformation
           </motion.h1>
@@ -94,7 +105,7 @@ export function HeroSection() {
                 <p className="text-white/90 text-lg md:text-xl italic max-w-2xl mx-auto">
                   "{bibleVerses[currentVerse].verse}"
                 </p>
-                <p className="text-church-gold font-medium mt-2">
+                <p className="text-red-500 font-medium mt-2">
                   — {bibleVerses[currentVerse].reference}
                 </p>
               </motion.div>
@@ -109,7 +120,7 @@ export function HeroSection() {
                 onClick={() => setCurrentVerse(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentVerse
-                    ? "bg-church-gold w-8"
+                    ? "bg-white w-8"
                     : "bg-white/40 hover:bg-white/60"
                 }`}
                 aria-label={`Go to verse ${index + 1}`}
@@ -124,46 +135,24 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button variant="hero" size="xl" asChild>
-              <Link to="/sermons/video" className="flex items-center gap-2">
-                <Play className="h-5 w-5" />
-                Watch Sermons
-              </Link>
+            <Button
+              size="xl"
+              onClick={handleWatchLive}
+              className="flex items-center gap-2 bg-red-500"
+            >
+              <Play className="h-5 w-5" />
+              Watch Live
             </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/sermons/text" className="flex items-center gap-2">
-                <BookOpen className="h-5 w-5" />
-                Read Sermons
-              </Link>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/events" className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
-                Events
-              </Link>
-            </Button>
-          </motion.div>
 
-          {/* Service Times Preview */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto"
-          >
-            {[
-              { day: "Sunday", time: "8:00 AM & 10:30 AM" },
-              { day: "Wednesday", time: "6:00 PM" },
-              { day: "Friday", time: "6:00 PM" },
-            ].map((service) => (
-              <div
-                key={service.day}
-                className="bg-white/10 backdrop-blur-sm rounded-xl py-4 px-6 border border-white/10"
-              >
-                <p className="text-church-gold font-semibold">{service.day}</p>
-                <p className="text-white/80 text-sm">{service.time}</p>
-              </div>
-            ))}
+            <Button 
+              size="lg"
+              variant="heroOutline"
+              onClick={handleVisitUs}
+              className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-base px-8 py-6 bg-transparent"
+            >
+              <MapPin className="w-5 h-5 mr-2" />
+              Visit Us
+            </Button>
           </motion.div>
         </div>
       </div>

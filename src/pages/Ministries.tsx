@@ -62,7 +62,7 @@ export default function MinistriesPage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function MinistriesPage() {
 
         {/* Ministries List */}
         <section className="py-20 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="space-y-16">
               {ministries.map((ministry, index) => (
                 <motion.div
@@ -140,7 +140,7 @@ export default function MinistriesPage() {
 
         {/* Join CTA */}
         <section className="py-16 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-6 text-center">
             <h2 className="font-serif text-3xl font-bold mb-4">
               Ready to Get Involved?
             </h2>

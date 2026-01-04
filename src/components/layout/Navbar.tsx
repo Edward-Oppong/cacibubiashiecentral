@@ -51,7 +51,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
@@ -80,8 +80,8 @@ export function Navbar() {
                   className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     location.pathname === link.path
                       ? isScrolled 
-                        ? "text-church-gold bg-church-gold/10" 
-                        : "text-church-gold"
+                        ? "text-red-500 bg-church-gold/10" 
+                        : "text-red-500"
                       : isScrolled
                         ? "text-foreground/80 hover:text-church-deep-blue hover:bg-muted"
                         : "text-white/90 hover:text-white hover:bg-white/10"
@@ -118,7 +118,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="gold" asChild>
+            <Button className="bg-red-500" asChild>
               <Link to="/give">Donate</Link>
             </Button>
           </div>

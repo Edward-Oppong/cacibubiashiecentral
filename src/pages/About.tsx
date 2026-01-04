@@ -41,13 +41,13 @@ export default function AboutPage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 About Us
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -99,7 +99,7 @@ export default function AboutPage() {
                   { icon: BookOpen, label: "6", desc: "Active Ministries" },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-church-cream rounded-2xl p-6 text-center">
-                    <stat.icon className="w-8 h-8 text-church-gold mx-auto mb-3" />
+                    <stat.icon className="w-8 h-8 text-red-500 mx-auto mb-3" />
                     <p className="font-serif text-3xl font-bold text-foreground">{stat.label}</p>
                     <p className="text-muted-foreground text-sm">{stat.desc}</p>
                   </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-8 shadow-soft"
               >
                 <div className="w-14 h-14 rounded-xl bg-church-gold/10 flex items-center justify-center mb-5">
-                  <Target className="w-7 h-7 text-church-gold" />
+                  <Target className="w-7 h-7 text-red-500" />
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Our Vision</h3>
                 <p className="text-muted-foreground">
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-8 shadow-soft"
               >
                 <div className="w-14 h-14 rounded-xl bg-church-gold/10 flex items-center justify-center mb-5">
-                  <Heart className="w-7 h-7 text-church-gold" />
+                  <Heart className="w-7 h-7 text-red-500" />
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Our Mission</h3>
                 <p className="text-muted-foreground">
@@ -162,8 +162,8 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4">
                 {beliefs.map((belief, index) => (
-                  <div key={index} className="flex gap-4 p-4 bg-church-cream rounded-xl">
-                    <span className="shrink-0 w-8 h-8 rounded-full bg-church-gold text-white flex items-center justify-center font-semibold text-sm">
+                  <div key={index} className="flex gap-4 p-4 bg-church-cream rounded-xl justify-start items-center">
+                    <span className="shrink-0 w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center font-semibold text-sm">
                       {index + 1}
                     </span>
                     <p className="text-foreground">{belief}</p>
@@ -183,7 +183,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center mb-14"
             >
-              <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-red-500 text-white rounded-full text-sm font-medium mb-4">
                 Our Leadership
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
@@ -212,7 +212,7 @@ export default function AboutPage() {
                     <h3 className="font-serif font-semibold text-lg text-foreground">
                       {leader.name}
                     </h3>
-                    <p className="text-church-gold text-sm">{leader.role}</p>
+                    <p className="text-red-500 text-sm">{leader.role}</p>
                   </div>
                 </motion.div>
               ))}

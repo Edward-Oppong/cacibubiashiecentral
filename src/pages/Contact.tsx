@@ -34,13 +34,13 @@ export default function ContactPage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 Get In Touch
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -55,7 +55,7 @@ export default function ContactPage() {
 
         {/* Contact Info & Form */}
         <section className="py-20 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Contact Info */}
               <motion.div
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 <div className="space-y-6 mb-10">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-xl bg-church-gold/10 flex items-center justify-center shrink-0">
-                      <MapPin className="w-6 h-6 text-church-gold" />
+                      <MapPin className="w-6 h-6 text-red-500" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Address</h4>
@@ -83,7 +83,7 @@ export default function ContactPage() {
 
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-xl bg-church-gold/10 flex items-center justify-center shrink-0">
-                      <Phone className="w-6 h-6 text-church-gold" />
+                      <Phone className="w-6 h-6 text-red-500" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Phone</h4>
@@ -94,7 +94,7 @@ export default function ContactPage() {
 
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-xl bg-church-gold/10 flex items-center justify-center shrink-0">
-                      <Mail className="w-6 h-6 text-church-gold" />
+                      <Mail className="w-6 h-6 text-red-500" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email</h4>
@@ -104,7 +104,7 @@ export default function ContactPage() {
 
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-xl bg-church-gold/10 flex items-center justify-center shrink-0">
-                      <Clock className="w-6 h-6 text-church-gold" />
+                      <Clock className="w-6 h-6 text-red-500" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Service Times</h4>
@@ -136,13 +136,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Map Placeholder */}
-                <div className="mt-10 bg-church-light-blue rounded-2xl h-64 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-church-gold mx-auto mb-3" />
-                    <p className="text-muted-foreground">Interactive map coming soon</p>
-                  </div>
-                </div>
+               
               </motion.div>
 
               {/* Contact Form */}
@@ -247,6 +241,14 @@ export default function ContactPage() {
                 )}
               </motion.div>
             </div>
+                 {/* Map Placeholder */}
+                <div className="mt-10 bg-church-light-blue rounded-2xl h-64 flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin className="w-12 h-20 text-red-500 mx-auto mb-3" />
+                    <p className="text-muted-foreground">Interactive map coming soon</p>
+                  </div>
+                </div>
+
           </div>
         </section>
       </main>

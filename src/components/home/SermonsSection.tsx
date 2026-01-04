@@ -36,7 +36,7 @@ const latestSermons = [
 export function SermonsSection() {
   return (
     <section className="py-20 lg:py-28 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function SermonsSection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-church-gold rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-red-500 rounded-full text-sm font-medium mb-4">
             Latest Sermons
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -75,7 +75,7 @@ export function SermonsSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-church-deep-blue/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-16 h-16 rounded-full bg-church-gold flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
                     {sermon.type === "video" ? (
                       <Play className="w-8 h-8 text-white ml-1" />
                     ) : (
@@ -85,7 +85,7 @@ export function SermonsSection() {
                 </div>
                 <span className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
                   sermon.type === "video" 
-                    ? "bg-church-gold text-white" 
+                    ? "bg-white/10 text-white" 
                     : "bg-church-deep-blue text-white"
                 }`}>
                   {sermon.type === "video" ? "Video" : "Text"}
@@ -94,7 +94,7 @@ export function SermonsSection() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-serif font-semibold text-lg text-foreground mb-3 line-clamp-2 group-hover:text-church-gold transition-colors">
+                <h3 className="font-serif font-semibold text-lg text-foreground mb-3 line-clamp-2 group-hover:text-red-500 transition-colors">
                   {sermon.title}
                 </h3>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">

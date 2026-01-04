@@ -44,7 +44,7 @@ const ministries = [
 export function MinistriesSection() {
   return (
     <section className="py-20 lg:py-28 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function MinistriesSection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-church-gold rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-red-500 rounded-full text-sm font-medium mb-4">
             Our Ministries
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -83,8 +83,8 @@ export function MinistriesSection() {
                   <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-church-gold/10 group-hover:bg-white/10 transition-colors" />
                   
                   <div className="relative">
-                    <div className="w-14 h-14 rounded-xl bg-church-gold/10 group-hover:bg-white/20 flex items-center justify-center mb-5 transition-colors">
-                      <ministry.icon className="w-7 h-7 text-church-gold group-hover:text-white transition-colors" />
+                    <div className="w-14 h-14 rounded-xl bg-church-gold/10 group-hover:bg-white/10 flex items-center justify-center mb-5 transition-colors">
+                      <ministry.icon className="w-7 h-7 text-red-500 group-hover:text-white transition-colors" />
                     </div>
                     <h3 className="font-serif font-semibold text-xl text-foreground group-hover:text-white mb-2 transition-colors">
                       {ministry.name}

@@ -83,7 +83,7 @@ export default function EventsPage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -104,7 +104,7 @@ export default function EventsPage() {
 
         {/* Events Grid */}
         <section className="py-20 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-8">
               {events.map((event, index) => (
                 <motion.div
@@ -162,7 +162,7 @@ export default function EventsPage() {
 
         {/* Calendar CTA */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-6 text-center">
             <div className="max-w-2xl mx-auto">
               <Calendar className="w-16 h-16 text-church-gold mx-auto mb-6" />
               <h2 className="font-serif text-3xl font-bold text-foreground mb-4">

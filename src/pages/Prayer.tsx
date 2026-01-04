@@ -69,13 +69,13 @@ export default function PrayerPage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 Prayer & Testimonies
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -90,7 +90,7 @@ export default function PrayerPage() {
 
         {/* Prayer Request Form */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -273,7 +273,7 @@ export default function PrayerPage() {
 
         {/* Featured Testimonies */}
         <section className="py-20 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

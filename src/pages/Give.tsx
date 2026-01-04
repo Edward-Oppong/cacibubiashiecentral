@@ -44,13 +44,13 @@ export default function GivePage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center"
             >
-              <span className="inline-block px-4 py-1.5 bg-white/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
                 Give Online
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -66,7 +66,7 @@ export default function GivePage() {
 
         {/* Giving Form */}
         <section className="py-20 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto">
               {submitted ? (
                 <motion.div
@@ -113,12 +113,12 @@ export default function GivePage() {
                             onClick={() => setSelectedType(type.id)}
                             className={`p-4 rounded-xl border-2 text-left transition-all ${
                               selectedType === type.id
-                                ? "border-church-gold bg-church-gold/5"
-                                : "border-border hover:border-church-gold/50"
+                                ? "border-red-500 bg-church-gold/5"
+                                : "border-border hover:border-red-200"
                             }`}
                           >
                             <type.icon className={`w-6 h-6 mb-2 ${
-                              selectedType === type.id ? "text-church-gold" : "text-muted-foreground"
+                              selectedType === type.id ? "text-muted-foreground" : "text-muted-foreground"
                             }`} />
                             <p className="font-semibold text-foreground">{type.label}</p>
                             <p className="text-xs text-muted-foreground">{type.description}</p>
@@ -140,7 +140,7 @@ export default function GivePage() {
                             onClick={() => setAmount(preset)}
                             className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                               amount === preset
-                                ? "bg-church-gold text-white"
+                                ? "bg-church-gold/50 text-white"
                                 : "bg-muted text-muted-foreground hover:bg-muted/80"
                             }`}
                           >
@@ -176,12 +176,12 @@ export default function GivePage() {
                             onClick={() => setSelectedMethod(method.id)}
                             className={`p-4 rounded-xl border-2 text-center transition-all ${
                               selectedMethod === method.id
-                                ? "border-church-gold bg-church-gold/5"
-                                : "border-border hover:border-church-gold/50"
+                                ? "border-red-500 bg-church-gold/5"
+                                : "border-border hover:border-red-200"
                             }`}
                           >
                             <method.icon className={`w-6 h-6 mx-auto mb-2 ${
-                              selectedMethod === method.id ? "text-church-gold" : "text-muted-foreground"
+                              selectedMethod === method.id ? "text-muted-foreground" : "text-muted-foreground"
                             }`} />
                             <p className="text-sm font-medium text-foreground">{method.label}</p>
                           </button>
@@ -190,7 +190,7 @@ export default function GivePage() {
                     </div>
 
                     {/* Submit */}
-                    <Button type="submit" variant="gold" size="xl" className="w-full">
+                    <Button type="submit" size="xl" className="w-full bg-red-500 text-white hover:text-white/10 hover:text-white font-semibold">
                       Give ₵{amount || "0"}
                     </Button>
 
@@ -206,22 +206,22 @@ export default function GivePage() {
 
         {/* Scripture */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-6 text-center">
             <blockquote className="max-w-2xl mx-auto">
               <p className="font-serif text-2xl text-foreground italic mb-4">
                 "Each of you should give what you have decided in your heart to give, 
                 not reluctantly or under compulsion, for God loves a cheerful giver."
               </p>
-              <cite className="text-church-gold font-medium">— 2 Corinthians 9:7</cite>
+              <cite className="text-red-500 font-medium">— 2 Corinthians 9:7</cite>
             </blockquote>
           </div>
         </section>
 
         {/* Bank Details */}
         <section className="py-16 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="max-w-xl mx-auto bg-white rounded-2xl p-8 shadow-soft text-center">
-              <Building className="w-12 h-12 text-church-gold mx-auto mb-4" />
+              <Building className="w-12 h-12 text-red-500 mx-auto mb-4" />
               <h3 className="font-serif text-xl font-bold text-foreground mb-4">
                 Bank Transfer Details
               </h3>

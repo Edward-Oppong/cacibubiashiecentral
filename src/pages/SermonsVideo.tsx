@@ -89,7 +89,7 @@ export default function VideoSermonsPage() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-gradient-holy text-white">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function VideoSermonsPage() {
 
         {/* Filters */}
         <section className="py-8 bg-white border-b border-border sticky top-20 z-30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
               <div className="relative w-full sm:w-80">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -144,7 +144,7 @@ export default function VideoSermonsPage() {
 
         {/* Sermons Grid */}
         <section className="py-16 bg-church-cream">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             {filteredSermons.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredSermons.map((sermon, index) => (
@@ -200,7 +200,7 @@ export default function VideoSermonsPage() {
 
         {/* CTA Section */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto px-6 text-center">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
               Prefer to Read?
             </h2>
