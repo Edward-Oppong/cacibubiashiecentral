@@ -70,7 +70,7 @@ export function EventsSection() {
               <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-red-500 rounded-full text-sm font-medium mb-4">
                 Upcoming Events
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground">
                 Join Our Community Activities
               </h2>
             </motion.div>
@@ -92,7 +92,7 @@ export function EventsSection() {
                       Featured Event
                     </span>
                   )}
-                  <h3 className="font-serif font-semibold text-xl text-foreground mb-3">
+                  <h3 className="font-body font-semibold text-xl text-foreground mb-3">
                     {event.title}
                   </h3>
                   <p className="text-muted-foreground mb-4">{event.description}</p>
@@ -135,7 +135,7 @@ export function EventsSection() {
               <span className="inline-block px-4 py-1.5 bg-church-deep-blue/10 text-church-deep-blue rounded-full text-sm font-medium mb-4">
                 Announcements
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+              <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground">
                 Stay Informed
               </h2>
             </motion.div>
@@ -155,7 +155,7 @@ export function EventsSection() {
                       <span className="inline-block px-2 py-0.5 bg-muted text-red-500 rounded text-xs font-medium mb-2">
                         {announcement.category}
                       </span>
-                      <h4 className="font-medium text-foreground transition-colors">
+                      <h4 className="font-medium text-foreground transition-colors font-body">
                         {announcement.title}
                       </h4>
                       <p className="text-sm text-muted-foreground mt-1">
@@ -176,7 +176,7 @@ export function EventsSection() {
               transition={{ delay: 0.3 }}
               className="mt-8 bg-gradient-holy rounded-2xl p-6 text-white"
             >
-              <h4 className="font-serif font-semibold text-xl mb-3">
+              <h4 className="font-body font-semibold text-xl mb-3">
                 Need Prayer?
               </h4>
               <p className="text-white/80 text-sm mb-5">

@@ -53,7 +53,7 @@ export function SermonsSection() {
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Nourish Your Soul with the Word
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-heading">
             Access our library of inspiring sermons. Watch, listen, or read messages 
             that will strengthen your faith and guide your walk with Christ.
           </p>
@@ -99,11 +99,11 @@ export function SermonsSection() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-serif font-semibold text-lg text-foreground mb-3 line-clamp-2 group-hover:text-red-500 transition-colors">
+                <h3 className="font-heading font-semibold text-lg text-foreground mb-3 line-clamp-2 group-hover:text-red-500 transition-colors">
                   {sermon.title}
                 </h3>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="flex items-center gap-1.5">
+                  <span className="flex items-center gap-1.5 font-body">
                     <User className="w-4 h-4" />
                     {sermon.preacher}
                   </span>

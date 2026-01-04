@@ -86,7 +86,7 @@ export function HeroSection() {
             className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
             A Place of{" "}
-            <span className="text-red-500">Faith</span>,{" "}
+            <span className="text-red-500 font-heading">Faith</span>,{" "}
             <br className="hidden sm:block" />
             Hope & Transformation
           </motion.h1>

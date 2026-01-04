@@ -18,11 +18,11 @@ export function WelcomeSection() {
             <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-red-500 rounded-full text-sm font-medium mb-4">
               Welcome to Our Church
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+            <h2 className="font-body text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
               Experience God's Love in Our{" "}
               <span className="text-red-500">Community</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6 font-heading">
               Christ Apostolic Church International - Bubiashie Central is a vibrant 
               community of believers committed to spreading the Gospel of Jesus Christ. 
               We welcome you with open hearts to experience the transforming power of 
@@ -78,10 +78,10 @@ export function WelcomeSection() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-serif font-semibold text-lg text-foreground mb-2">
+                  <h3 className="font-heading font-extrabold text-lg text-foreground mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed font-body">
                     {feature.description}
                   </p>
                 </div>

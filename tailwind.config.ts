@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -14,8 +19,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["Playfair Display", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Playfair Display", "serif"], // Hero, H1-H6, quotes
+        body: ["Lato", "sans-serif"], // Paragraphs, nav, buttons
+      },
+      fontSize: {
+        hero: ["4rem", { lineHeight: "1.1", fontWeight: "700" }], // Hero H1
+        verse: ["1.25rem", { lineHeight: "1.6" }], // Bible verse
       },
       colors: {
         border: "hsl(var(--border))",
