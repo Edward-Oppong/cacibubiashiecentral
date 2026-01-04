@@ -12,6 +12,7 @@ const latestSermons = [
     duration: "45 min",
     type: "video",
     thumbnail: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=250&fit=crop",
+    videoUrl: '#'
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const latestSermons = [
     duration: "38 min",
     type: "video",
     thumbnail: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=400&h=250&fit=crop",
+    videoUrl: '#'
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ const latestSermons = [
     duration: "52 min",
     type: "text",
     thumbnail: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=400&h=250&fit=crop",
+    videoUrl: '#'
   },
 ];
 
@@ -77,7 +80,9 @@ export function SermonsSection() {
                 <div className="absolute inset-0 bg-church-deep-blue/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
                     {sermon.type === "video" ? (
-                      <Play className="w-8 h-8 text-white ml-1" />
+                      <Play
+                       onClick={() => window.open(sermon.videoUrl, "_blank")}
+                      className="w-8 h-8 text-white ml-1" />
                     ) : (
                       <BookOpen className="w-7 h-7 text-white" />
                     )}

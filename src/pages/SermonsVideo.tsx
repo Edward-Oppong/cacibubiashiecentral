@@ -164,7 +164,9 @@ export default function VideoSermonsPage() {
                       />
                       <div className="absolute inset-0 bg-church-deep-blue/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                          <Play className="w-8 h-8 text-white ml-1" />
+                          <Play
+                          onClick={() => window.open(sermon.videoUrl, "_blank")}
+                          className="w-8 h-8 text-white ml-1" />
                         </div>
                       </div>
                       <span className="absolute top-4 left-4 px-3 py-1 bg-white/10 text-white rounded-full text-xs font-medium">
@@ -196,6 +198,18 @@ export default function VideoSermonsPage() {
               </div>
             )}
           </div>
+
+            {/* View All Button */}
+        <div className="text-center mt-12">
+          <Button 
+            variant="outline"
+            size="lg"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => window.open("https://www.youtube.com/@CACIBubiashie", "_blank")}
+          >
+            View All Sermons
+          </Button>
+        </div>
         </section>
 
         {/* CTA Section */}
