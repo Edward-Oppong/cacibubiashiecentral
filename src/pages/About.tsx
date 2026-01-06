@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Users, Target, Heart, BookOpen } from "lucide-react";
+import heroImage from "@/assets/hero-church.jpg";
 
 const leaders = [
   {
@@ -40,8 +41,17 @@ export default function AboutPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-6">
+        <section className="pt-32 pb-20 bg-gradient-holy text-white relative">
+           <div className="absolute inset-0">
+              <img
+                src={heroImage}
+                alt="Church sanctuary"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-hero-overlay" />
+            </div>
+          <div className="container mx-auto px-6 relative">
+           
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

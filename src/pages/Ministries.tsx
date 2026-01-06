@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Users, Heart, Music, BookOpen, Globe, Mic, Baby, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-church.jpg";
 
 const ministries = [
   {
@@ -61,8 +62,16 @@ export default function MinistriesPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-6">
+        <section className="pt-32 pb-20 bg-gradient-holy text-white relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -123,12 +132,15 @@ export default function MinistriesPage() {
                         </div>
                         <Button variant="churchPrimary">Join This Ministry</Button>
                       </div>
-                      <div className={`bg-church-light-blue p-8 sm:p-12 flex items-center justify-center ${
-                        index % 2 === 0 ? "" : "lg:order-1"
-                      }`}>
-                        <div className={`w-40 h-40 rounded-full ${ministry.color}/20 flex items-center justify-center`}>
-                          <ministry.icon className={`w-20 h-20 ${ministry.color.replace('bg-', 'text-')}`} />
-                        </div>
+                      <div className="relative">
+                        <div className="absolute inset-0">
+                          <img
+                            src={heroImage}
+                            alt="Church sanctuary"
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/40" />
+                         </div>
                       </div>
                     </div>
                   </div>

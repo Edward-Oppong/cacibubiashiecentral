@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Calendar, MapPin, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-church.jpg";
 
 const events = [
   {
@@ -82,8 +83,16 @@ export default function EventsPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-6">
+        <section className="pt-32 pb-20 bg-gradient-holy text-white relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -161,14 +170,22 @@ export default function EventsPage() {
         </section>
 
         {/* Calendar CTA */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-6 text-center">
+        <section className="py-16 bg-white relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 text-center relative">
             <div className="max-w-2xl mx-auto">
               <Calendar className="w-16 h-16 text-red-500 mx-auto mb-6" />
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
+              <h2 className="font-serif text-3xl font-bold text-white mb-4">
                 Never Miss an Event
               </h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-white mb-6">
                 Subscribe to our newsletter to receive updates about upcoming events, 
                 programs, and special announcements.
               </p>

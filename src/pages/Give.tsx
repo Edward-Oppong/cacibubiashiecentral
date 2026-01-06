@@ -6,6 +6,7 @@ import { Heart, Gift, CreditCard, Smartphone, Building, CheckCircle } from "luci
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import heroImage from "@/assets/hero-church.jpg";
 
 const givingTypes = [
   { id: "tithe", label: "Tithe", icon: Heart, description: "Honor God with your firstfruits" },
@@ -43,8 +44,16 @@ export default function GivePage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-6">
+        <section className="pt-32 pb-20 bg-gradient-holy text-white relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -218,14 +227,22 @@ export default function GivePage() {
         </section>
 
         {/* Bank Details */}
-        <section className="py-16 bg-church-cream">
-          <div className="container mx-auto px-6">
-            <div className="max-w-xl mx-auto bg-white rounded-2xl p-8 shadow-soft text-center">
+        <section className="py-16 bg-church-cream relative">
+          <div className="absolute inset-0">
+              <img
+                src={heroImage}
+                alt="Church sanctuary"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-hero-overlay" />
+            </div>
+          <div className="container mx-auto px-6 relative">
+            <div className="max-w-xl mx-auto bg-transparent rounded-2xl p-8 shadow-soft text-center">
               <Building className="w-12 h-12 text-red-500 mx-auto mb-4" />
-              <h3 className="font-serif text-xl font-bold text-foreground mb-4">
+              <h3 className="font-serif text-xl font-bold text-foreground mb-4 text-white">
                 Bank Transfer Details
               </h3>
-              <div className="space-y-2 text-muted-foreground">
+              <div className="space-y-2 text-muted-foreground text-white">
                 <p><strong>Bank:</strong> Ghana Commercial Bank</p>
                 <p><strong>Account Name:</strong> Christ Apostolic Church International</p>
                 <p><strong>Account Number:</strong> XXXX-XXXX-XXXX</p>

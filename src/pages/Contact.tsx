@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import heroImage from "@/assets/hero-church.jpg";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -33,8 +34,16 @@ export default function ContactPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-6">
+        <section className="pt-32 pb-20 bg-gradient-holy text-white relative">
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Church sanctuary"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-hero-overlay" />
+        </div>  
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

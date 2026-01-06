@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import heroImage from "@/assets/hero-church.jpg";
 
 const testimonies = [
   {
@@ -68,8 +69,16 @@ export default function PrayerPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-holy text-white">
-          <div className="container mx-auto px-6">
+        <section className="pt-32 pb-20 bg-gradient-holy text-white relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -272,18 +281,26 @@ export default function PrayerPage() {
         </section>
 
         {/* Featured Testimonies */}
-        <section className="py-20 bg-church-cream">
-          <div className="container mx-auto px-6">
+        <section className="py-20 bg-church-cream relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-14"
             >
-              <span className="inline-block px-4 py-1.5 bg-church-gold/10 text-church-gold rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 bg-white/10 text-red-500 rounded-full text-sm font-medium mb-4">
                 Praise Reports
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
                 What God Has Done
               </h2>
             </motion.div>
@@ -296,18 +313,18 @@ export default function PrayerPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6 shadow-soft"
+                  className="bg-hero-overlay rounded-2xl p-6 shadow-soft"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-church-gold/10 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                       <Heart className="w-5 h-5 text-church-gold" />
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground">{testimony.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimony.date}</p>
+                      <p className="font-semibold text-white">{testimony.name}</p>
+                      <p className="text-sm text-red-500">{testimony.date}</p>
                     </div>
                   </div>
-                  <p className="text-foreground italic">"{testimony.testimony}"</p>
+                  <p className="text-white italic">"{testimony.testimony}"</p>
                 </motion.div>
               ))}
             </div>

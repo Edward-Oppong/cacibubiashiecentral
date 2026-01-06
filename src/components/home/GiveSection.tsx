@@ -2,11 +2,20 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Heart, Gift, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-church.jpg";
 
 export function GiveSection() {
   return (
     <section className="py-20 lg:py-28 bg-gradient-holy text-white relative overflow-hidden">
       {/* Decorative Elements */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Church sanctuary"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-hero-overlay" />
+      </div>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-church-gold/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl" />

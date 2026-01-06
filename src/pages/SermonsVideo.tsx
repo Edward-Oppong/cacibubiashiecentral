@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Play, Clock, User, Filter, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-church.jpg";
 
 const videoSermons = [
   {
@@ -88,8 +89,16 @@ export default function VideoSermonsPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-16 bg-gradient-holy text-white">
-          <div className="container mx-auto px-6">
+        <section className="pt-32 pb-16 bg-gradient-holy text-white relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 relative">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -213,15 +222,23 @@ export default function VideoSermonsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
+        <section className="py-16 bg-white relative">
+          <div className="absolute inset-0">
+            <img
+              src={heroImage}
+              alt="Church sanctuary"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-hero-overlay" />
+          </div>
+          <div className="container mx-auto px-6 text-center relative">
+            <h2 className="font-serif text-2xl font-bold text-white mb-4">
               Prefer to Read?
             </h2>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-white mb-6">
               Access our collection of written sermons for deeper study.
             </p>
-            <Button variant="churchOutline" size="lg" asChild>
+            <Button className="text-white border border-white bg-transparent" size="lg" asChild>
               <Link to="/sermons/text">Browse Text Sermons</Link>
             </Button>
           </div>
