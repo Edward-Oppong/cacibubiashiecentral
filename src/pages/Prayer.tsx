@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/8.jpeg";
+import heroImage2 from "@/assets/10.jpeg";
 
 const testimonies = [
   {
@@ -74,7 +75,7 @@ export default function PrayerPage() {
             <img
               src={heroImage}
               alt="Church sanctuary"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-hero-overlay" />
           </div>
@@ -284,7 +285,7 @@ export default function PrayerPage() {
         <section className="py-20 bg-church-cream relative">
           <div className="absolute inset-0">
             <img
-              src={heroImage}
+              src={heroImage2}
               alt="Church sanctuary"
               className="w-full h-full object-cover"
             />

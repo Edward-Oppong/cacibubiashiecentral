@@ -30,7 +30,7 @@ export function HeroSection() {
   const { scrollToSection } = useSmoothScroll();
 
     const handleWatchLive = () => {
-    window.open("https://www.youtube.com/@CACIBubiashie", "_blank");
+    window.open("https://www.youtube.com/@cacint_bubiashiecentral", "_blank");
   };
 
   const handleVisitUs = (e: React.MouseEvent) => {

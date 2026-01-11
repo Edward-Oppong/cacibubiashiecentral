@@ -107,7 +107,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                      <p className="text-muted-foreground">info@cacibubiashie.org</p>
+                      <p className="text-muted-foreground">christapostolicchurchbubiashie@gmail.com</p>
                     </div>
                   </div>
 

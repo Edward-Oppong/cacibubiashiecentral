@@ -115,8 +115,9 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-red-300 shrink-0" />
-                <a href="mailto:info@cacibubiashie.org" className="text-white/70 hover:text-white text-sm transition-colors">
-                  info@cacibubiashie.org
+                <a href="mailto:christapostolicchurchbubiashie@gmail.com" className="text-white/70 hover:text-white text-sm transition-colors">
+                  christapostolicchurchbubiashie@gmail.com
+
                 </a>
               </li>
             </ul>

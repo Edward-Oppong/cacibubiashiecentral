@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Heart, Gift, CreditCard } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-church.jpg";
+import giveImage from "@/assets/12.jpeg";
 
 export function GiveSection() {
   return (
@@ -10,9 +10,9 @@ export function GiveSection() {
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={giveImage}
           alt="Church sanctuary"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-hero-overlay" />
       </div>

@@ -214,7 +214,7 @@ export default function VideoSermonsPage() {
             variant="outline"
             size="lg"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            onClick={() => window.open("https://www.youtube.com/@CACIBubiashie", "_blank")}
+            onClick={() => window.open("https://www.youtube.com/@cacint_bubiashiecentral", "_blank")}
           >
             View All Sermons
           </Button>

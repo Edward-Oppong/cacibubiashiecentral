@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Users, Target, Heart, BookOpen } from "lucide-react";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/11.jpeg";
 
 const leaders = [
   {
@@ -46,7 +46,7 @@ export default function AboutPage() {
               <img
                 src={heroImage}
                 alt="Church sanctuary"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-hero-overlay" />
             </div>
