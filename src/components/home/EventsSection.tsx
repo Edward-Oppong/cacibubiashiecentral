@@ -6,24 +6,15 @@ import { Button } from "@/components/ui/button";
 const upcomingEvents = [
   {
     id: 1,
-    title: "New Year Prayer & Fasting",
-    date: "Jan 5-12, 2026",
-    time: "6:00 AM - 6:00 PM Daily",
-    location: "Church Auditorium",
-    description: "Start the year with dedicated prayer and fasting for breakthrough and divine direction.",
-    featured: true,
-  },
-  {
-    id: 2,
     title: "Youth Fellowship Night",
     date: "Jan 10, 2026",
     time: "5:00 PM",
     location: "Youth Hall",
     description: "An evening of worship, games, and fellowship for young people.",
-    featured: false,
+    featured: true,
   },
   {
-    id: 3,
+    id: 2,
     title: "Marriage Enrichment Seminar",
     date: "Jan 17, 2026",
     time: "9:00 AM - 2:00 PM",
@@ -36,21 +27,9 @@ const upcomingEvents = [
 const announcements = [
   {
     id: 1,
-    title: "Church Building Offering",
-    date: "Ongoing",
-    category: "Finance",
-  },
-  {
-    id: 2,
     title: "Choir Auditions Open",
     date: "Jan 15, 2026",
     category: "Ministry",
-  },
-  {
-    id: 3,
-    title: "Sunday School Registration",
-    date: "Now Open",
-    category: "Education",
   },
 ];
 

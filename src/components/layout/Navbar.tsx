@@ -13,7 +13,7 @@ const navLinks = [
     path: "/sermons",
     subLinks: [
       { name: "Video Sermons", path: "/sermons/video" },
-      { name: "Text Sermons", path: "/sermons/text" },
+      { name: "Audio Sermons", path: "/sermons/audio" },
     ]
   },
   { name: "Events", path: "/events" },

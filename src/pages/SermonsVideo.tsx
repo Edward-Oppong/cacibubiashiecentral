@@ -7,6 +7,7 @@ import { Play, Clock, User, Filter, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-church.jpg";
+import Image from "@/assets/2.jpeg"
 
 const videoSermons = [
   {
@@ -16,7 +17,7 @@ const videoSermons = [
     date: "Jan 1, 2026",
     duration: "45 min",
     topic: "Faith",
-    thumbnail: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&h=400&fit=crop",
+    thumbnail: Image,
     videoUrl: "#",
   },
   {
@@ -26,7 +27,7 @@ const videoSermons = [
     date: "Dec 29, 2025",
     duration: "38 min",
     topic: "Prayer",
-    thumbnail: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&h=400&fit=crop",
+    thumbnail: Image,
     videoUrl: "#",
   },
   {
@@ -36,7 +37,7 @@ const videoSermons = [
     date: "Dec 25, 2025",
     duration: "52 min",
     topic: "Purpose",
-    thumbnail: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop",
+    thumbnail: Image,
     videoUrl: "#",
   },
   {
@@ -46,7 +47,7 @@ const videoSermons = [
     date: "Dec 22, 2025",
     duration: "41 min",
     topic: "Salvation",
-    thumbnail: "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=600&h=400&fit=crop",
+    thumbnail: Image,
     videoUrl: "#",
   },
   {
@@ -56,7 +57,7 @@ const videoSermons = [
     date: "Dec 18, 2025",
     duration: "48 min",
     topic: "Family",
-    thumbnail: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop",
+    thumbnail: Image,
     videoUrl: "#",
   },
   {
@@ -66,7 +67,7 @@ const videoSermons = [
     date: "Dec 15, 2025",
     duration: "44 min",
     topic: "Faith",
-    thumbnail: "https://images.unsplash.com/photo-1476234251651-f353703a034d?w=600&h=400&fit=crop",
+    thumbnail: Image,
     videoUrl: "#",
   },
 ];

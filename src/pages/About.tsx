@@ -3,27 +3,28 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Users, Target, Heart, BookOpen } from "lucide-react";
 import heroImage from "@/assets/11.jpeg";
+import Image from "@/assets/8.jpeg"
 
 const leaders = [
   {
     name: "Pastor James Mensah",
     role: "General Overseer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+    image: Image,
   },
   {
     name: "Elder Grace Owusu",
     role: "Associate Pastor",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face",
+    image: Image,
   },
   {
     name: "Deacon Samuel Asante",
     role: "Church Administrator",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+    image: Image,
   },
   {
     name: "Deaconess Martha Boateng",
     role: "Women's Leader",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face",
+    image: Image,
   },
 ];
 
@@ -103,7 +104,7 @@ export default function AboutPage() {
                 className="grid grid-cols-2 gap-4"
               >
                 {[
-                  { icon: Users, label: "1000+", desc: "Members" },
+                  { icon: Users, label: "500+", desc: "Members" },
                   { icon: Target, label: "25+", desc: "Years of Ministry" },
                   { icon: Heart, label: "50+", desc: "Outreach Programs" },
                   { icon: BookOpen, label: "6", desc: "Active Ministries" },

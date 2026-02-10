@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { BookOpen, Clock, User, Download, Search, Filter } from "lucide-react";
+import { BookOpen, Clock, User, Download, Search, Filter, Mic } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-church.jpg";
@@ -67,7 +67,7 @@ const textSermons = [
 
 const topics = ["All Topics", "Spiritual Warfare", "Grace", "Holy Spirit", "Rest", "Forgiveness", "Wisdom"];
 
-export default function TextSermonsPage() {
+export default function AudioSermonsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTopic, setSelectedTopic] = useState("All Topics");
 
@@ -99,7 +99,7 @@ export default function TextSermonsPage() {
               className="max-w-3xl mx-auto text-center"
             >
               <span className="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium mb-4">
-                Text Sermons
+                Audio Sermons
               </span>
               <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-6">
                 Read Our Sermons
@@ -162,7 +162,7 @@ export default function TextSermonsPage() {
                     <div className="flex flex-col sm:flex-row gap-6">
                       <div className="shrink-0">
                         <div className="w-16 h-16 rounded-xl bg-church-gold/10 flex items-center justify-center transition-colors">
-                          <BookOpen className="w-8 h-8 text-red-500  transition-colors" />
+                          <Mic className="w-8 h-8 text-red-500  transition-colors" />
                         </div>
                       </div>
                       <div className="flex-1">

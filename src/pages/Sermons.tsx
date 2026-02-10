@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Play, BookOpen } from "lucide-react";
+import { Play, BookOpen, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-church.jpg";
 
@@ -74,19 +74,19 @@ export default function SermonsPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <Link to="/sermons/text" className="block group">
+                <Link to="/sermons/audio" className="block group">
                   <div className="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300">
                     <div className="aspect-video bg-church-gold flex items-center justify-center">
                       <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                        <BookOpen className="w-10 h-10 text-white transition-colors" />
+                        <Mic className="w-10 h-10 text-white transition-colors" />
                       </div>
                     </div>
                     <div className="p-8 text-center">
                       <h3 className="font-serif text-2xl font-bold text-foreground mb-3 group-hover:text-red-500 transition-colors">
-                        Text Sermons
+                        Audio Sermons
                       </h3>
                       <p className="text-muted-foreground">
-                        Read and study our written sermons for deeper spiritual insight.
+                        Listen to our recorded sermons for deeper spiritual insight.
                       </p>
                     </div>
                   </div>

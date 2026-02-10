@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Sermons from "./pages/Sermons";
 import SermonsVideo from "./pages/SermonsVideo";
-import SermonsText from "./pages/SermonsText";
+import SermonsAudio from "./pages/SermonsAudio";
 import Events from "./pages/Events";
 import Ministries from "./pages/Ministries";
 import Prayer from "./pages/Prayer";
@@ -28,7 +28,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/sermons" element={<Sermons />} />
           <Route path="/sermons/video" element={<SermonsVideo />} />
-          <Route path="/sermons/text" element={<SermonsText />} />
+          <Route path="/sermons/audio" element={<SermonsAudio />} />
           <Route path="/events" element={<Events />} />
           <Route path="/ministries" element={<Ministries />} />
           <Route path="/prayer" element={<Prayer />} />

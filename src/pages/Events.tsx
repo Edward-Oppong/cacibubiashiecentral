@@ -8,64 +8,16 @@ import heroImage from "@/assets/hero-church.jpg";
 const events = [
   {
     id: 1,
-    title: "New Year Prayer & Fasting",
-    date: "Jan 5-12, 2026",
-    time: "6:00 AM - 6:00 PM Daily",
-    location: "Church Auditorium",
-    description: "Start the year with dedicated prayer and fasting for breakthrough and divine direction. Join us for morning and evening prayer sessions.",
-    category: "Prayer",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "Youth Fellowship Night",
+    title: "Solid Foundation 2026",
     date: "Jan 10, 2026",
-    time: "5:00 PM - 8:00 PM",
-    location: "Youth Hall",
-    description: "An evening of worship, games, and fellowship for young people ages 13-25.",
+    time: "6:00 PM - 8:30 PM",
+    location: "Church Premises",
+    description: "An evening of worship, and experience faith, hope, and transformation.",
     category: "Youth",
-    featured: false,
-  },
-  {
-    id: 3,
-    title: "Marriage Enrichment Seminar",
-    date: "Jan 17, 2026",
-    time: "9:00 AM - 2:00 PM",
-    location: "Conference Room",
-    description: "Strengthen your marriage with biblical principles and practical guidance from experienced counselors.",
-    category: "Family",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Women's Conference 2026",
-    date: "Jan 24-25, 2026",
-    time: "9:00 AM Each Day",
-    location: "Main Auditorium",
-    description: "A powerful gathering of women for worship, teaching, and empowerment. Theme: 'Walking in Purpose'",
-    category: "Women",
+    type: "Join Now",
     featured: true,
   },
-  {
-    id: 5,
-    title: "Children's Vacation Bible School",
-    date: "Feb 1-5, 2026",
-    time: "9:00 AM - 12:00 PM",
-    location: "Children's Wing",
-    description: "Fun-filled week of Bible stories, crafts, games, and songs for children ages 4-12.",
-    category: "Children",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Men's Breakfast Fellowship",
-    date: "Feb 8, 2026",
-    time: "7:00 AM - 9:00 AM",
-    location: "Fellowship Hall",
-    description: "Monthly gathering for men to fellowship, share testimonies, and grow together in faith.",
-    category: "Men",
-    featured: false,
-  },
+
 ];
 
 const categoryColors: Record<string, string> = {
@@ -115,7 +67,7 @@ export default function EventsPage() {
         <section className="py-20 bg-church-cream">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-8">
-              {events.map((event, index) => (
+              {events.map((event, index)  => (
                 <motion.div
                   key={event.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -159,7 +111,7 @@ export default function EventsPage() {
                         </div>
                       </div>
                       <Button variant="churchPrimary" className="w-full mt-6">
-                        Register Now
+                       {event.type}
                       </Button>
                     </div>
                   </div>
@@ -168,6 +120,8 @@ export default function EventsPage() {
             </div>
           </div>
         </section>
+
+
 
         {/* Calendar CTA */}
         <section className="py-16 bg-white relative">
@@ -189,11 +143,11 @@ export default function EventsPage() {
                 Subscribe to our newsletter to receive updates about upcoming events, 
                 programs, and special announcements.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-church-gold"
+                  className="flex-1 px-2 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-church-gold"
                 />
                 <Button className="bg-red-500 text-white">Subscribe</Button>
               </div>

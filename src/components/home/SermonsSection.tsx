@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Play, BookOpen, Clock, User } from "lucide-react";
+import { Play, BookOpen, Clock, User, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "@/assets/image.jpg"
 
 const latestSermons = [
   {
@@ -11,7 +12,7 @@ const latestSermons = [
     date: "Jan 1, 2026",
     duration: "45 min",
     type: "video",
-    thumbnail: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=400&h=250&fit=crop",
+    thumbnail: Image,
     videoUrl: '#'
   },
   {
@@ -21,7 +22,7 @@ const latestSermons = [
     date: "Dec 29, 2025",
     duration: "38 min",
     type: "video",
-    thumbnail: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=400&h=250&fit=crop",
+    thumbnail: Image,
     videoUrl: '#'
   },
   {
@@ -30,8 +31,8 @@ const latestSermons = [
     preacher: "Pastor James Mensah",
     date: "Dec 25, 2025",
     duration: "52 min",
-    type: "text",
-    thumbnail: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=400&h=250&fit=crop",
+    type: "video",
+    thumbnail: Image,
     videoUrl: '#'
   },
 ];
@@ -60,7 +61,7 @@ export function SermonsSection() {
         </motion.div>
 
         {/* Sermons Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 hover:cursor-pointer">
           {latestSermons.map((sermon, index) => (
             <motion.article
               key={sermon.id}
@@ -84,7 +85,7 @@ export function SermonsSection() {
                        onClick={() => window.open(sermon.videoUrl, "_blank")}
                       className="w-8 h-8 text-white ml-1" />
                     ) : (
-                      <BookOpen className="w-7 h-7 text-white" />
+                      <Mic className="w-7 h-7 text-white" />
                     )}
                   </div>
                 </div>
@@ -93,7 +94,7 @@ export function SermonsSection() {
                     ? "bg-white/10 text-white" 
                     : "bg-church-deep-blue text-white"
                 }`}>
-                  {sermon.type === "video" ? "Video" : "Text"}
+                  {sermon.type === "video" ? "Video" : "Audio"}
                 </span>
               </div>
 
@@ -129,9 +130,9 @@ export function SermonsSection() {
             </Link>
           </Button>
           <Button variant="churchOutline" size="lg" asChild>
-            <Link to="/sermons/text" className="flex items-center gap-2">
-              <BookOpen className="w-5 h-5" />
-              Text Sermons
+            <Link to="/sermons/audio" className="flex items-center gap-2">
+              <Mic className="w-5 h-5" />
+              Audio Sermons
             </Link>
           </Button>
         </div>
